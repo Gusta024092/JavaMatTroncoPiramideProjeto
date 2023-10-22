@@ -36,9 +36,11 @@ public class TroncoVolume extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Como realizar o cálculo do volume de um tronco de pirâmide?");
 
+        jTextPane1.setEditable(false);
         jTextPane1.setText("Para calcular o volume de um tronco de pirâmide, é comum calcular a diferença entre o volume da pirâmide maior e o volume da pirâmide menor quando realizada a secção transversal. Existe também uma fórmula específica para calcular o volume de um tronco de pirâmide:\n\n\n\nV → volume;\n\nh → altura do tronco;\n\nAB → área da base maior;\n\nAb → área da base menor.");
         jScrollPane1.setViewportView(jTextPane1);
 
+        jTextPane2.setEditable(false);
         jTextPane2.setText("V = h . (Ab + AB + √AB . √Ab) / 3\n\nExemplo:\n\nh = 6\nAB = 100\nAb = 25\n\nV = 6 . (25 + 100 + (√100 . √25)) / 3\n\nV = 6 . (125 + (10 . 5))/3\n\nV = 6 . (175) / 3\nV = 1050 / 3\nV = 350m^3");
         jScrollPane2.setViewportView(jTextPane2);
 

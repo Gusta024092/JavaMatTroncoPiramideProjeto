@@ -130,18 +130,21 @@ public class informaCalculos extends javax.swing.JInternalFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         OQueETronco frame = new OQueETronco();
         frame.setVisible(true);
+        frame.setSize(853, 480);
         DesktopInfo.add(frame);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         TroncoArea frame = new TroncoArea();
         frame.setVisible(true);
+        frame.setSize(853, 480);
         DesktopInfo.add(frame);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         TroncoVolume frame = new TroncoVolume();
         frame.setVisible(true);
+        frame.setSize(853, 480);
         DesktopInfo.add(frame);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 

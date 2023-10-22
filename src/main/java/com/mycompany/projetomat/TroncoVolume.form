@@ -69,6 +69,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="text" type="java.lang.String" value="Para calcular o volume de um tronco de pir&#xe2;mide, &#xe9; comum calcular a diferen&#xe7;a entre o volume da pir&#xe2;mide maior e o volume da pir&#xe2;mide menor quando realizada a sec&#xe7;&#xe3;o transversal. Existe tamb&#xe9;m uma f&#xf3;rmula espec&#xed;fica para calcular o volume de um tronco de pir&#xe2;mide:&#xa;&#xa;&#xa;&#xa;V &#x2192; volume;&#xa;&#xa;h &#x2192; altura do tronco;&#xa;&#xa;AB &#x2192; &#xe1;rea da base maior;&#xa;&#xa;Ab &#x2192; &#xe1;rea da base menor."/>
           </Properties>
         </Component>
@@ -83,6 +84,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane2">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="text" type="java.lang.String" value="V = h . (Ab + AB + &#x221a;AB . &#x221a;Ab) / 3&#xa;&#xa;Exemplo:&#xa;&#xa;h = 6&#xa;AB = 100&#xa;Ab = 25&#xa;&#xa;V = 6 . (25 + 100 + (&#x221a;100 . &#x221a;25)) / 3&#xa;&#xa;V = 6 . (125 + (10 . 5))/3&#xa;&#xa;V = 6 . (175) / 3&#xa;V = 1050 / 3&#xa;V = 350m^3"/>
           </Properties>
         </Component>

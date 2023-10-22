@@ -1,5 +1,6 @@
 package com.mycompany.projetomat;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class TelaPrincipal extends javax.swing.JFrame {
@@ -24,6 +25,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuCalculos = new javax.swing.JMenuItem();
+        mnuLimparJanelas = new javax.swing.JMenuItem();
         mnuSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         mnuVersao = new javax.swing.JMenuItem();
@@ -32,6 +34,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Protótipo para Cálculo de Área de Tronco de uma Pirâmide");
         setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        PanelDesktop.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout PanelDesktopLayout = new javax.swing.GroupLayout(PanelDesktop);
         PanelDesktop.setLayout(PanelDesktopLayout);
@@ -53,6 +57,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(mnuCalculos);
+
+        mnuLimparJanelas.setText("Limpar Caixas");
+        mnuLimparJanelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuLimparJanelasActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuLimparJanelas);
 
         mnuSair.setText("Sair");
         mnuSair.addActionListener(new java.awt.event.ActionListener() {
@@ -111,14 +123,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void informacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informacoesActionPerformed
         informaCalculos frame = new informaCalculos();
         frame.setVisible(true);
+        frame.setSize(1024, 600);
         PanelDesktop.add(frame);
+        
     }//GEN-LAST:event_informacoesActionPerformed
 
     private void mnuCalculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuCalculosActionPerformed
         Calculos frame = new Calculos();
         frame.setVisible(true);
+        frame.setSize(1024, 600);
         PanelDesktop.add(frame);
     }//GEN-LAST:event_mnuCalculosActionPerformed
+
+    private void mnuLimparJanelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLimparJanelasActionPerformed
+        PanelDesktop.removeAll();
+        PanelDesktop.revalidate();
+        PanelDesktop.repaint();
+    }//GEN-LAST:event_mnuLimparJanelasActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -162,6 +183,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem mnuCalculos;
+    private javax.swing.JMenuItem mnuLimparJanelas;
     private javax.swing.JMenuItem mnuSair;
     private javax.swing.JMenuItem mnuVersao;
     // End of variables declaration//GEN-END:variables
