@@ -36,9 +36,11 @@ public class TroncoArea extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Como realizar o cálculo da área de um tronco de pirâmide?");
 
+        jTextPane1.setEditable(false);
         jTextPane1.setText("A área total do tronco de pirâmide é a soma das áreas da base com a área lateral.\n\nAT = AB + Ab + Al\n\nAT → área total do tronco de pirâmide;\n\nAB → área da base maior;\n\nAb → área da base menor;\n\nAl → área lateral, encontrada pela soma das áreas dos trapézios que compõem o sólido.");
         jScrollPane1.setViewportView(jTextPane1);
 
+        jTextPane2.setEditable(false);
         jTextPane2.setText("AB = Cálcular a área do poligono dessa base.\n\nAb =Cálcular a área do poligono dessa base.\n\nAl = Cálcular a área do poligono e após isso multiplicar pela quantidade de faces laterais.\n\nAT = somar todos os valores dos itens acima.");
         jScrollPane2.setViewportView(jTextPane2);
 

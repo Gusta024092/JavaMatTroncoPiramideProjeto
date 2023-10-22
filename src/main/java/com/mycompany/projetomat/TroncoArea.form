@@ -66,6 +66,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="text" type="java.lang.String" value="A &#xe1;rea total do tronco de pir&#xe2;mide &#xe9; a soma das &#xe1;reas da base com a &#xe1;rea lateral.&#xa;&#xa;AT = AB + Ab + Al&#xa;&#xa;AT &#x2192; &#xe1;rea total do tronco de pir&#xe2;mide;&#xa;&#xa;AB &#x2192; &#xe1;rea da base maior;&#xa;&#xa;Ab &#x2192; &#xe1;rea da base menor;&#xa;&#xa;Al &#x2192; &#xe1;rea lateral, encontrada pela soma das &#xe1;reas dos trap&#xe9;zios que comp&#xf5;em o s&#xf3;lido."/>
           </Properties>
         </Component>
@@ -80,6 +81,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane2">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="text" type="java.lang.String" value="AB = C&#xe1;lcular a &#xe1;rea do poligono dessa base.&#xa;&#xa;Ab =C&#xe1;lcular a &#xe1;rea do poligono dessa base.&#xa;&#xa;Al = C&#xe1;lcular a &#xe1;rea do poligono e ap&#xf3;s isso multiplicar pela quantidade de faces laterais.&#xa;&#xa;AT = somar todos os valores dos itens acima."/>
           </Properties>
         </Component>
