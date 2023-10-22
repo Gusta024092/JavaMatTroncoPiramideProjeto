@@ -8,33 +8,19 @@ public class TroncoPiramide
     private double h;
     private double baseMaior;
     private double baseMenor;
-    private double areaLateral;
-    public TroncoPiramide(double h, double baseMaior, double baseMenor)
-    {
-        try
-        {
-            this.h = h;
-            this.baseMaior = baseMaior;
-            this.baseMenor = baseMenor;   
-        }
-        catch (Exception ex)
-        {
-            //não faz nada
-        }
-    }
     
-    public TroncoPiramide(double areaLateral, double baseMaior, double baseMenor, int decisao){
-        if (decisao == 2){
+    public TroncoPiramide(double h, double baseMaior, double baseMenor){
+
             try{
-                this.areaLateral = areaLateral;
+                this.h = h;
                 this.baseMaior = baseMaior;
                 this.baseMenor = baseMenor;
             } 
             catch (Exception ex){
                 // não faz nada
             }
-        }
     }
+ 
 
     public double getH() {
         return h;
@@ -61,7 +47,7 @@ public class TroncoPiramide
     }
     
     public double area(){
-       return this.baseMaior + this.baseMenor + this.areaLateral;
+       return this.baseMaior + this.baseMenor + this.h;
     }
     
     public String mostrarCalculoVolume(int estado){
@@ -69,24 +55,26 @@ public class TroncoPiramide
             case 0:
                 return null;
             case 1:
-                return String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
-                        this.baseMaior + " * " + this.baseMenor + ") + " + this.baseMenor;
+                return "V = h/3 . (AB + Ab + raiz(Ab * AB))";
             case 2:
-                return String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
+                return "V = h/3 . (AB + Ab + raiz(Ab * AB))\n" + String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
+                        this.baseMaior + " * " + this.baseMenor + ") + " + this.baseMenor;
+            case 3:
+                return "V = h/3 . (AB + Ab + raiz(Ab * AB))\n" + String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
                         this.baseMaior + " * " + this.baseMenor + ") + " + this.baseMenor + "\n" +
                         String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + " + deci.format(calculaSegundaParteVolume());
-            case 3:
-                return String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
+            case 4:
+                return "V = h/3 . (AB + Ab + raiz(Ab * AB))\n" + String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
                         this.baseMaior + " * " + this.baseMenor + ") + " + this.baseMenor + "\n" +
                         String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + " + deci.format(calculaSegundaParteVolume())
                         + "\n" + deci.format(calculaPrimeiraParteVolume()) + " * " + deci.format(calculaSegundaParteVolume());
                 
-            case 4:
-                return String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
+            case 5:
+                return "V = h/3 . (AB + Ab + raiz(Ab * AB))\n" + String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + raiz(" +
                         this.baseMaior + " * " + this.baseMenor + ") + " + this.baseMenor + "\n" +
                         String.valueOf(h) + "/ 3 * " + String.valueOf(this.baseMaior) + " + " + deci.format(calculaSegundaParteVolume())
                         + "\n" + deci.format(calculaPrimeiraParteVolume()) + " * " + deci.format(calculaSegundaParteVolume()) + "\n"
-                        + "= O volume é: --->  " + deci.format(volume());
+                        + "= O volume é: " + deci.format(volume());
             default:
                 return "Limite final";
         }
@@ -98,10 +86,14 @@ public class TroncoPiramide
             case 0:
                 return null;
             case 1:
-                return "A = " + this.baseMaior + " + " + this.baseMenor + " + " + this.areaLateral;
+                return "AT = AB + Ab + Al";
             case 2:
-                return "A = " + this.baseMaior + " + " + this.baseMenor + " + " + this.areaLateral + "\n"
-                        + "A = --> " + deci.format(area());
+                return "AB = " + this.baseMaior + "\nAb = " + this.baseMenor + "\nAl = " + this.h;
+            case 3:
+                return "AT = " + this.baseMaior + " + " + this.baseMenor + " + " + this.h;
+            case 4:
+                return "AT = " + this.baseMaior + " + " + this.baseMenor + " + " + this.h + "\n"
+                        + "AT = " + deci.format(area());
             default:
                 return "Limite final";
         }
